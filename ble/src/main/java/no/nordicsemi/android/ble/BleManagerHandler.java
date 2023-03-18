@@ -724,6 +724,7 @@ abstract class BleManagerHandler extends RequestHandler {
 			}
 			log(Log.DEBUG, () -> "gatt.disconnect()");
 			gatt.disconnect();
+			close();
 			if (wasConnected)
 				return true;
 
